@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Geolocalisation</string>
+    <string name="descriptif_parcours">descriptif parcours</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="velo">vélo</string>
+</resources>
