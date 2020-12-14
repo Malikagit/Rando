@@ -20,6 +20,7 @@ import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
@@ -92,7 +93,11 @@ public class listParcours extends AppCompatActivity {
 
     private void getDataFromFirestore() {
         // requette sur la collection que l'on veut appeler
-        Query query = db.collection("parcours");
+      CollectionReference parcoursRef = db.collection("parcours");
+      /**  faire des séléctions dans la base en utilisant des requètes composées
+       * pas encore fini
+       * **/
+ Query query = parcoursRef.whereEqualTo("locomotion","vélo");
 
         // On utilise le model pour faire l'acquisition des données dans Firestore
         FirestoreRecyclerOptions<ParcoursModel> parcours = new FirestoreRecyclerOptions.Builder<ParcoursModel>()

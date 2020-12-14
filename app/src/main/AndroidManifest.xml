@@ -38,11 +38,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Geolocalisation">
         <activity android:name=".DetailsParcours">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <!--
@@ -60,7 +56,11 @@
 
         <activity android:name=".listParcours" />
         <activity android:name=".AutourMoi">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

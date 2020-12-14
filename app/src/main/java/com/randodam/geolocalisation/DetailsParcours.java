@@ -17,24 +17,31 @@ public class DetailsParcours extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details_parcours);
+        titreApp();
         Fragment fragment1 = new CarteParcours();
         addFragment();
 
     }
 
 
+    public void titreApp() {
+        //Ici on déclare le nom de la page à afficher
+        String titre = "Details parcours";
+        // On fait le lien avec la ressource et on la modifiee
+        setTitle(titre);
+    }
 
 
 
     /** Appel du Maps fragment  **/
      public void addFragment() {
 
-         FragmentManager fragmentManager;
-         fragmentManager = getSupportFragmentManager();
+        FragmentManager fragmentManager;
+        fragmentManager = getSupportFragmentManager();
 
-         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         //fragmentTransaction.add(this.getTaskId(),new criteres_recherche());
-       fragmentTransaction.replace(R.id.nav_carteParcours, new CarteParcours());
+        fragmentTransaction.replace(R.id.nav_carteParcours, new CarteParcours());
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
